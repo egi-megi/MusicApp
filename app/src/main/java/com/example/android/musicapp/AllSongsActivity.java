@@ -19,22 +19,22 @@ public class AllSongsActivity extends AppCompatActivity {
 
     // Create an array of songs
     ArrayList<Song> song = new ArrayList<Song>();
-        song.add(new Song("Somebody That I Used to Know","Gotye"));
-        song.add(new Song("I Wanna Dance with Somebody","Whitney Houston"));
-        song.add(new Song("One Moment in Time","Whitney Houston"));
-        song.add(new Song("I’m Every Woman","Whitney Houston"));
-        song.add(new Song("I Will Always Love You","Whitney Houston"));
-        song.add(new Song("Hallelujah","Rufus Wainwright"));
-        song.add(new Song("Nie jestem sobą","Elektryczne Gitary"));
-        song.add(new Song("Nowa gwiazda","Elektryczne Gitary"));
-        song.add(new Song("Co ty tutaj robisz","Elektryczne Gitary"));
-        song.add(new Song("Przewróciło się niech leży","Elektryczne Gitary"));
-        song.add(new Song("Jestem z miasta","Elektryczne Gitary"));
-        song.add(new Song("The black pearl","Klaus Badelt"));
-        song.add(new Song("My Life Would Suck Without You","Kelly Clarkson"));
-        song.add(new Song("Waka Waka (This Time for Africa)","Shakira"));
-        song.add(new Song("Radetzky March","Strauss"));
-        song.add(new Song("Bałkanica","PIERSI "));
+        song.add(new Song("Somebody That I Used to Know","Gotye", R.drawable.gotye_small));
+        song.add(new Song("I Wanna Dance with Somebody","Whitney Houston", R.drawable.whitney_houston_small));
+        song.add(new Song("One Moment in Time","Whitney Houston", R.drawable.whitney_houston_small));
+        song.add(new Song("I’m Every Woman","Whitney Houston", R.drawable.whitney_houston_small));
+        song.add(new Song("I Will Always Love You","Whitney Houston", R.drawable.whitney_houston_small));
+        song.add(new Song("Hallelujah","Rufus Wainwright", R.drawable.piersi_small));
+        song.add(new Song("Nie jestem sobą","Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
+        song.add(new Song("Nowa gwiazda","Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
+        song.add(new Song("Co ty tutaj robisz","Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
+        song.add(new Song("Przewróciło się niech leży","Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
+        song.add(new Song("Jestem z miasta","Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
+        song.add(new Song("The black pearl","Pirates of the Caribbean (soundtrack)", R.drawable.pirates_small));
+        song.add(new Song("My Life Would Suck Without You","Kelly Clarkson", R.drawable.clarkson_kelly_small));
+        song.add(new Song("Waka Waka (This Time for Africa)","Shakira", R.drawable.shakira_small));
+        song.add(new Song("Radetzky March","Strauss", R.drawable.strauss_small));
+        song.add(new Song("Bałkanica","PIERSI ", R.drawable.piersi_small));
 
 
     SongsAdapter adapter = new SongsAdapter(this, song);

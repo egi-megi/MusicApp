@@ -8,11 +8,13 @@ public class Song {
 
     private String mTitle;
     private String mBandSinger;
+    private int mImageResourceId;
     private boolean favorite = false;
 
-    public Song(String title, String bandSinger) {
+    public Song(String title, String bandSinger, int imageResourceId) {
         mTitle = title;
         mBandSinger = bandSinger;
+        mImageResourceId=imageResourceId;
     }
 
     public String getTitle() {
@@ -22,6 +24,10 @@ public class Song {
     public String getBandSinger() {
         return  mBandSinger;
     };
+
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
 
     public boolean isFavorite() {
         return favorite;

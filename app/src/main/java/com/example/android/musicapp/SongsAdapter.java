@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -43,6 +44,12 @@ public class SongsAdapter extends ArrayAdapter<Song> {
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         bandSingerTextView.setText(currentSong.getBandSinger());
+
+        // Find the ImageView in the list_item.xml layout with the ID version_number
+        ImageView bandSingerImageView = (ImageView) listItemView.findViewById(R.id.band_singer_image_view);
+        // Get the version number from the current AndroidFlavor object and
+        // set this text on the number TextView
+        bandSingerImageView.setImageResource(currentSong.getImageResourceId());
 
         return listItemView;
     }

@@ -8,4 +8,5 @@
     android:paddingBottom="@dimen/margines_main"
     android:paddingLeft="@dimen/margines_main"
     android:paddingRight="@dimen/margines_main"
-    android:paddingTop="@dimen/margines_main"/>
+    android:paddingTop="@dimen/margines_main"
+    android:background="@color/background"/>
