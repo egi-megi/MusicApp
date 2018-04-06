@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+
+    <string name="all_songs">All Songs</string>
+    <string name="music_bands_singers">Music bands Singers</string>
+    <string name="favorite">Favorite</string>
+</resources>
