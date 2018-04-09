@@ -1,15 +1,19 @@
 package com.example.android.musicapp;
 
+import android.support.annotation.NonNull;
+
+import java.io.Serializable;
+
 /**
  * Created by egi-megi on 05.04.18.
  */
 
-public class Song {
+public class Song implements Serializable{
 
     private String mTitle;
     private String mBandSinger;
     private int mImageResourceId;
-    private boolean favorite = false;
+    private boolean favoriteSong = false;
 
     public Song(String title, String bandSinger, int imageResourceId) {
         mTitle = title;
@@ -29,11 +33,14 @@ public class Song {
         return mImageResourceId;
     }
 
-    public boolean isFavorite() {
-        return favorite;
+    public boolean isFavoriteSong() {
+        return favoriteSong;
     }
 
-    public void setFavorite(boolean favorite) {
-        this.favorite = favorite;
+    public void setFavoriteSong(boolean favoriteSong) {
+        this.favoriteSong = favoriteSong;
     }
+
+
+
 }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,9 +19,11 @@ import java.util.List;
 
 public class SongsAdapter extends ArrayAdapter<Song> {
 
-
-    public SongsAdapter(@NonNull Context context, @NonNull List<Song> objects) {
+    SongsApplication application;
+    public SongsAdapter(@NonNull Context context, @NonNull List<Song> objects, SongsApplication application) {
         super(context, 0, objects);
+        this.application=application;
+
     }
 
     @NonNull
@@ -31,7 +34,7 @@ public class SongsAdapter extends ArrayAdapter<Song> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        Song currentSong = getItem(position);
+        final Song currentSong = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
@@ -50,6 +53,18 @@ public class SongsAdapter extends ArrayAdapter<Song> {
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         bandSingerImageView.setImageResource(currentSong.getImageResourceId());
+
+        CheckBox favorite_song_checkBox = (CheckBox) listItemView.findViewById(R.id.favorite_checkBox);
+        favorite_song_checkBox.setChecked(currentSong.isFavoriteSong());
+        favorite_song_checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentSong.setFavoriteSong(((CheckBox) v).isChecked());
+                application.generateFavSongs();
+                SongsAdapter.this.notifyDataSetChanged();
+            }
+        });
+
 
         return listItemView;
     }
