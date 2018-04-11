@@ -41,4 +41,13 @@ public class MainActivity extends AppCompatActivity {
         Intent favoriteIntent = new Intent(MainActivity.this, FavoriteActivity.class);
         startActivity(favoriteIntent);
     }
+
+    public void goToBandSingerActivity(View view) {
+        // Find the View that shows the bandSinger category
+        TextView bandSinger = (TextView) findViewById(R.id.music_bands_singers);
+
+
+        Intent bandSingerIntent = new Intent(MainActivity.this, BandsSingerActivity.class);
+        startActivity(bandSingerIntent);
+    }
 }

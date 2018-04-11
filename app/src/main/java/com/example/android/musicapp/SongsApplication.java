@@ -12,21 +12,17 @@ import java.util.Collections;
 public class SongsApplication extends Application {
     ArrayList<Song> allSongs;
     ArrayList<Song> favSongs;
-    ArrayList<Song> bandsList;
-    ArrayList<Song> ElektryczneGitary;
+    ArrayList<String> bandsList;
 
     public SongsApplication() {
         this.allSongs = new ArrayList<>();
         favSongs=new ArrayList<>();
         bandsList=new ArrayList<>();
-        ElektryczneGitary =new ArrayList<>();
         insertSongs();
         Collections.sort(allSongs,new SongsTitleComparator());
-        Collections.sort(bandsList,new BandSingerComparator());
-        Collections.sort(ElektryczneGitary,new BandSingerComparator());
         generateFavSongs();
         generateBandsList();
-        generateSongsInBand();
+        Collections.sort(bandsList);
     }
 
     void insertSongs(){
@@ -71,22 +67,26 @@ public class SongsApplication extends Application {
 
     }
 
-    public void generateBandsList(){
+    private void generateBandsList(){
         for (int i=0; i<allSongs.size();i++) {
             Song song = allSongs.get(i);
-            bandsList.add(song);
-        }
-        Collections.sort(bandsList,new BandSingerComparator());
-    }
-
-    public void generateSongsInBand(){
-        for (int i=0; i<allSongs.size();i++) {
-            Song song = allSongs.get(i);
-            if (String bandSinger.matches ("Elektryczne Gitary")){
-                ElektryczneGitary.add(song);
+            if (! bandsList.contains(song.getBandSinger())) {
+                bandsList.add(song.getBandSinger());
             }
         }
-        Collections.sort(ElektryczneGitary,new SongsTitleComparator());
+
+    }
+
+    public ArrayList<Song> generateSongsInBand(String band){
+        ArrayList<Song> songsForBand = new ArrayList<>();
+        for (int i=0; i<allSongs.size();i++) {
+            Song song = allSongs.get(i);
+            if (song.getBandSinger().equals(band)){
+                songsForBand.add(song);
+            }
+        }
+        Collections.sort(songsForBand,new SongsTitleComparator());
+        return songsForBand;
     }
 
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:onClick="goToBandActivity"
+    android:paddingTop="@dimen/margines_between_songs"
+    android:paddingLeft="@dimen/margines_main">
+
+        <ImageView
+            android:id="@+id/band_singer_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/piersi_small" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/band_singer_text_view"
+                tools:text="band/singer"
+                android:textSize="@dimen/text_size_activities_title"
+                android:textColor="@color/redText"/>
+
+
+</LinearLayout>

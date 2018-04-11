@@ -25,6 +25,14 @@
             android:name=".FavoriteActivity"
             android:label="Favorite">
         </activity>
+        <activity
+            android:name=".BandsSingerActivity"
+            android:label="BandSinger">
+        </activity>
+        <activity
+            android:name=".BandActivity"
+            android:label="ElektryczneGitary">
+        </activity>
     </application>
 
 </manifest>
