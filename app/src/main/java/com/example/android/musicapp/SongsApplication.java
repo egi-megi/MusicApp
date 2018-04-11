@@ -12,13 +12,21 @@ import java.util.Collections;
 public class SongsApplication extends Application {
     ArrayList<Song> allSongs;
     ArrayList<Song> favSongs;
+    ArrayList<Song> bandsList;
+    ArrayList<Song> ElektryczneGitary;
 
     public SongsApplication() {
         this.allSongs = new ArrayList<>();
         favSongs=new ArrayList<>();
+        bandsList=new ArrayList<>();
+        ElektryczneGitary =new ArrayList<>();
         insertSongs();
         Collections.sort(allSongs,new SongsTitleComparator());
+        Collections.sort(bandsList,new BandSingerComparator());
+        Collections.sort(ElektryczneGitary,new BandSingerComparator());
         generateFavSongs();
+        generateBandsList();
+        generateSongsInBand();
     }
 
     void insertSongs(){
@@ -62,6 +70,25 @@ public class SongsApplication extends Application {
 //        }
 
     }
+
+    public void generateBandsList(){
+        for (int i=0; i<allSongs.size();i++) {
+            Song song = allSongs.get(i);
+            bandsList.add(song);
+        }
+        Collections.sort(bandsList,new BandSingerComparator());
+    }
+
+    public void generateSongsInBand(){
+        for (int i=0; i<allSongs.size();i++) {
+            Song song = allSongs.get(i);
+            if (String bandSinger.matches ("Elektryczne Gitary")){
+                ElektryczneGitary.add(song);
+            }
+        }
+        Collections.sort(ElektryczneGitary,new SongsTitleComparator());
+    }
+
 
 
 }
