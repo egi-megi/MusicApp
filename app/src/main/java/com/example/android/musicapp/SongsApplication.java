@@ -89,6 +89,16 @@ public class SongsApplication extends Application {
         return songsForBand;
     }
 
+    public Song findSingleSong(String titleSingleSong){
+        for (int i=0; i<allSongs.size();i++) {
+            Song song = allSongs.get(i);
+            if (song.getTitle().equals(titleSingleSong)){
+                return song;
+            }
+        }
+        return null;
+    }
+
 
 
 }

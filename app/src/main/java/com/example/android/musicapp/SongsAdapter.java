@@ -55,7 +55,7 @@ public class SongsAdapter extends ArrayAdapter<Song> {
         // set this text on the number TextView
         bandSingerImageView.setImageResource(currentSong.getImageResourceId());
 
-        View.OnClickListener list=new View.OnClickListener() {
+     /*   View.OnClickListener list=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent bandIntent = new Intent(getContext(), BandActivity.class);
@@ -65,8 +65,8 @@ public class SongsAdapter extends ArrayAdapter<Song> {
             }
         };
         titleTextView.setOnClickListener(list);
-
-
+        bandSingerImageView.setOnClickListener(list);
+*/
         CheckBox favorite_song_checkBox = (CheckBox) listItemView.findViewById(R.id.favorite_checkBox);
         favorite_song_checkBox.setChecked(currentSong.isFavoriteSong());
         favorite_song_checkBox.setOnClickListener(new View.OnClickListener() {

@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:name=".AllSongsActivity"
-            android:label="AllSongs">
+            android:label="All Songs">
         </activity>
         <activity
             android:name=".FavoriteActivity"
@@ -27,11 +27,13 @@
         </activity>
         <activity
             android:name=".BandsSingerActivity"
-            android:label="BandSinger">
+            android:label="Music Bands and Singers">
         </activity>
         <activity
-            android:name=".BandActivity"
-            android:label="ElektryczneGitary">
+            android:name=".BandActivity">
+        </activity>
+        <activity
+            android:name=".SingleSongActivity">
         </activity>
     </application>
 

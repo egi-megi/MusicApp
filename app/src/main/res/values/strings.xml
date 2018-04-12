@@ -4,4 +4,5 @@
     <string name="all_songs">All Songs</string>
     <string name="music_bands_singers">Music bands Singers</string>
     <string name="favorite">Favorite</string>
+    <string name="bandTitle">String band</string>
 </resources>

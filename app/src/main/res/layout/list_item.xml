@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/margines_between_songs"
+   android:paddingTop="@dimen/margines_between_songs"
     android:paddingLeft="@dimen/margines_main">
+    <!--   android:onClick="goToSingleSongActivity" -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,6 +19,7 @@
         android:id="@+id/band_singer_image_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="goToSingleSongActivity"
         android:layout_weight="1"
         android:src="@drawable/piersi_small" />
 
@@ -32,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/title_text_view"
+        android:onClick="goToSingleSongActivity"
         tools:text="title"
         android:textSize="@dimen/text_size_songs_title"
         android:textStyle="bold"

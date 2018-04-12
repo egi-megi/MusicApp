@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/single_song_layout"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/band_singer_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/piersi_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/title_text_view"
+        tools:text="title"
+        android:textSize="@dimen/text_size_songs_title"
+        android:textStyle="bold"
+        android:textColor="@color/redText"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margines_main"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/band_singer_text_view"
+        tools:text="band/singer"
+        android:textSize="@dimen/text_size_activities_title"
+        android:textColor="@color/redText"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="play"/>
+    </LinearLayout>
+
+
+</LinearLayout>
