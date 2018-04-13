@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
+
     public void goToFavoriteActivity(View view) {
         // Find the View that shows the favorite category
         TextView favorite = (TextView) findViewById(R.id.favorite);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView bandSinger = (TextView) findViewById(R.id.music_bands_singers);
 
 
-        Intent bandSingerIntent = new Intent(MainActivity.this, BandsSingerActivity.class);
+        Intent bandSingerIntent = new Intent(MainActivity.this, OnlyBandsSingerActivity.class);
         startActivity(bandSingerIntent);
     }
 }

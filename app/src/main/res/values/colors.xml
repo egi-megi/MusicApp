@@ -6,7 +6,6 @@
 
     <color name="background">#000000</color>
 
-    <color name="yellowLines">#DFD600</color>
-    <color name="orangeText">#FF9800</color>
-    <color name="redText">#F44336</color>
+    <color name="redLines">#DF0306</color>
+    <color name="orangeText">#F46306</color>
 </resources>

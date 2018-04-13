@@ -3,16 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/redLines</item>
+        <item name="colorPrimaryDark">@color/background</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--<style name="Bookmarks">-->
-        <!--<item name="layout_width">0dp</item>-->
+    <!--<style name="BookmarksInMainAtivity">-->
+        <!--&lt;!&ndash;<item name="layout_width">0dp</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="layout_height">wrap_content</item>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item name="layout_weight">1</item>&ndash;&gt;-->
         <!--<item name="gravity">center_horizontal</item>-->
         <!--<item name="textColor">@color/redText</item>-->
         <!--<item name="textStyle">bold</item>-->
+        <!--<item name="textSize">@dimen/text_size_activities_title</item>-->
     <!--</style>-->
 
 </resources>

@@ -20,9 +20,10 @@ import java.util.List;
 public class SongsInBandAdapter extends ArrayAdapter<Song> {
 
     SongsApplication application;
+
     public SongsInBandAdapter(@NonNull Context context, @NonNull List<Song> objects, SongsApplication application) {
         super(context, 0, objects);
-        this.application=application;
+        this.application = application;
 
     }
 
@@ -30,7 +31,7 @@ public class SongsInBandAdapter extends ArrayAdapter<Song> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_song_in_band, parent, false);
         }
 

@@ -3,9 +3,15 @@
     <dimen name="margines_main">16dp</dimen>
     <dimen name="margines_between_songs">2dp</dimen>
     <dimen name="margines_between_lines">4dp</dimen>
+    <dimen name="margines_bottom_single_song">70dp</dimen>
 
-    <dimen name="text_size_songs_title">18sp</dimen>
     <dimen name="text_size_activities_title">20sp</dimen>
+    <dimen name="text_size_songs_title">16sp</dimen>
+    <dimen name="text_size_songs_band">14sp</dimen>
+    <dimen name="text_size_single_songs_title">24sp</dimen>
+    <dimen name="text_size_single_songs_band">20sp</dimen>
+
+    <dimen name="image_size_height">80dp</dimen>
 
     <dimen name="thickness_lines">1dp</dimen>
 

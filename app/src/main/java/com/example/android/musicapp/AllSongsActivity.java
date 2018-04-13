@@ -18,19 +18,18 @@ import javax.xml.transform.Source;
 
 public class AllSongsActivity extends AppCompatActivity {
 
-   public void goToSingleSongActivity(View view) {
+    public void goToSingleSongActivity(View view) {
         // Find the View that shows the bandSinger category
         TextView textView =
-                view instanceof ImageView ? (TextView) ((View)view.getParent()).findViewById(R.id.title_text_view):
-                (TextView) view.findViewById(R.id.title_text_view);
+                view instanceof ImageView ? (TextView) ((View) view.getParent()).findViewById(R.id.title_text_view) :
+                        (TextView) view.findViewById(R.id.title_text_view);
 
         Intent titleIntent = new Intent(AllSongsActivity.this, SingleSongActivity.class);
-        String songTitle=textView.getText().toString();
-        titleIntent.putExtra("titleSingleSong",songTitle);
+        String songTitle = textView.getText().toString();
+        titleIntent.putExtra("titleSingleSong", songTitle);
         startActivity(titleIntent);
 
-   }
-
+    }
 
 
     @Override
@@ -38,20 +37,13 @@ public class AllSongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.songs_list);
 
-   ArrayList<Song> songs=((SongsApplication) this.getApplication()).allSongs;
+        ArrayList<Song> songs = ((SongsApplication) this.getApplication()).allSongs;
 
-    SongsAdapter adapter = new SongsAdapter(this, songs,((SongsApplication) this.getApplication()));
-    ListView listView = (ListView) findViewById(R.id.list);
+        SongsAdapter adapter = new SongsAdapter(this, songs, ((SongsApplication) this.getApplication()));
+        ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 
-/*
-        Intent myIntentOfFavoriteSong = new Intent(this, FavoriteActivity.class);
-        myIntentOfF/avoriteSong.putExtra("song", songs);
-        myIntentOfFavoriteSong.putExtra("song", songs);
-        startActivity(myIntentOfFavoriteSong);*/
-}
-
-
+    }
 
 
 }

@@ -32,20 +32,20 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="@string/all_songs"
-            android:textColor="@color/redText"
+            android:textColor="@color/orangeText"
             android:textSize="@dimen/text_size_activities_title"
             android:textStyle="bold" />
 
         <View
             android:layout_width="@dimen/thickness_lines"
             android:layout_height="match_parent"
-            android:background="@color/yellowLines" />
+            android:background="@color/redLines" />
 
         <View
             android:layout_width="@dimen/thickness_lines"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/margines_between_lines"
-            android:background="@color/yellowLines" />
+            android:background="@color/redLines" />
 
         <TextView
             android:id="@+id/favorite"
@@ -55,7 +55,7 @@
             android:gravity="center_horizontal"
             android:onClick="goToFavoriteActivity"
             android:text="@string/favorite"
-            android:textColor="@color/redText"
+            android:textColor="@color/orangeText"
             android:textSize="@dimen/text_size_activities_title"
             android:textStyle="bold" />
 
@@ -64,48 +64,48 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal"
         android:layout_marginLeft="@dimen/margines_main"
-        android:layout_marginRight="@dimen/margines_main">
+        android:layout_marginRight="@dimen/margines_main"
+        android:layout_weight="0.2"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margines_main"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginRight="@dimen/margines_main">
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/thickness_lines"
-            android:background="@color/yellowLines" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/thickness_lines"
+                android:background="@color/redLines" />
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/thickness_lines"
-            android:background="@color/yellowLines"
-            android:layout_marginTop="@dimen/margines_between_lines"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/thickness_lines"
+                android:layout_marginTop="@dimen/margines_between_lines"
+                android:background="@color/redLines" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margines_main"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginLeft="@dimen/margines_main">
+            android:orientation="vertical">
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/thickness_lines"
-                android:background="@color/yellowLines" />
+                android:background="@color/redLines" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/thickness_lines"
-                android:background="@color/yellowLines"
-                android:layout_marginTop="@dimen/margines_between_lines"/>
+                android:layout_marginTop="@dimen/margines_between_lines"
+                android:background="@color/redLines" />
 
         </LinearLayout>
 
@@ -114,13 +114,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margines_between_lines"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingBottom="@dimen/margines_main"
-        android:paddingLeft="@dimen/margines_main"
-        android:paddingRight="@dimen/margines_main"
-        android:paddingTop="@dimen/margines_main">
+        android:paddingBottom="@dimen/margines_main">
 
         <TextView
             android:id="@+id/music_bands_singers"
@@ -130,29 +128,46 @@
             android:gravity="center_horizontal"
             android:onClick="goToBandSingerActivity"
             android:text="@string/music_bands_singers"
-            android:textColor="@color/redText"
+            android:textColor="@color/orangeText"
             android:textSize="@dimen/text_size_activities_title"
             android:textStyle="bold" />
 
         <View
             android:layout_width="@dimen/thickness_lines"
             android:layout_height="match_parent"
-            android:background="@color/yellowLines" />
+            android:background="@color/redLines" />
 
         <View
             android:layout_width="@dimen/thickness_lines"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/margines_between_lines"
-            android:background="@color/yellowLines" />
+            android:background="@color/redLines" />
 
-        <EditText
-            android:id="@+id/search"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margines_between_lines"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:hint="search a song here"
-            android:textColor="@color/yellowLines" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margines_main">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="@string/serach_song"
+                android:inputType="text"
+                android:textColorHint="@color/orangeText"
+                android:textSize="@dimen/text_size_activities_title"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_red_24dp" />
+        </LinearLayout>
 
     </LinearLayout>
 

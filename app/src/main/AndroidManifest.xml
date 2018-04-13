@@ -26,11 +26,11 @@
             android:label="Favorite">
         </activity>
         <activity
-            android:name=".BandsSingerActivity"
+            android:name=".OnlyBandsSingerActivity"
             android:label="Music Bands and Singers">
         </activity>
         <activity
-            android:name=".BandActivity">
+            android:name=".SongsInBandActivity">
         </activity>
         <activity
             android:name=".SingleSongActivity">

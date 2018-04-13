@@ -17,12 +17,13 @@ import java.util.List;
  * Created by egi-megi on 11.04.18.
  */
 
-public class BandsAdapter extends ArrayAdapter<String> {
+public class OnlyBandsSingerAdapter extends ArrayAdapter<String> {
 
     SongsApplication application;
-    public BandsAdapter(@NonNull Context context, @NonNull List<String> objects, SongsApplication application) {
+
+    public OnlyBandsSingerAdapter(@NonNull Context context, @NonNull List<String> objects, SongsApplication application) {
         super(context, 0, objects);
-        this.application=application;
+        this.application = application;
 
     }
 
@@ -30,26 +31,18 @@ public class BandsAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.band_singer_item, parent, false);
         }
 
         final String currentBand = getItem(position);
 
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
+        // Find the TextView in the song_on_list_itemist_item.xml layout with the ID version_number
         TextView bandSingerTextView = (TextView) listItemView.findViewById(R.id.band_singer_text_view);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         bandSingerTextView.setText(currentBand);
-
-        // Find the ImageView in the list_item.xml layout with the ID version_number
-       // ImageView bandSingerImageView = (ImageView) listItemView.findViewById(R.id.band_singer_image_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-      //  bandSingerImageView.setImageResource(currentSong.getImageResourceId());
-
-
 
         return listItemView;
     }
