@@ -23,12 +23,13 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/skip_previous_checkBox"
+        <Button
+            android:id="@+id/skip_previous_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margines_bottom_single_song"
-            android:button="@drawable/skip_previous_checkbox" />
+            android:background="@color/background"
+            android:drawableTop="@drawable/skip_previous_button" />
 
         <CheckBox
             android:id="@+id/strat_pausa_checkBox"
@@ -37,11 +38,12 @@
             android:layout_marginRight="@dimen/margines_bottom_single_song"
             android:button="@drawable/start_pausa_checkbox" />
 
-        <CheckBox
-            android:id="@+id/skip_next_checkBox"
+        <Button
+            android:id="@+id/skip_next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/skip_next_checkbox" />
+            android:background="@color/background"
+            android:drawableTop="@drawable/skip_next_button" />
     </LinearLayout>
 
     <TextView

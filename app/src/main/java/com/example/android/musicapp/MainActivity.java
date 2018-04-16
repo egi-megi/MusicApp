@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,4 +52,16 @@ public class MainActivity extends AppCompatActivity {
         Intent bandSingerIntent = new Intent(MainActivity.this, OnlyBandsSingerActivity.class);
         startActivity(bandSingerIntent);
     }
+
+
+    public String findSong(View view) {
+        EditText searchSongEditText = (EditText) findViewById(R.id.search);
+        String titleOfSong = searchSongEditText.getText().toString();
+        if (titleOfSong.matches("(.*)+song.getTitle()")) {
+            Intent singleSongIntent = new Intent(MainActivity.this, SingleSongActivity.class);
+            startActivity(singleSongIntent);
+        }
+        return titleOfSong;
+    }
+
 }
