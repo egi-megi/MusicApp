@@ -31,7 +31,7 @@ public class OnlyBandsSingerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.songs_list);
 
-        ArrayList<String> bandsSingers = ((SongsApplication) this.getApplication()).bandsList;
+        ArrayList<Band> bandsSingers = ((SongsApplication) this.getApplication()).bandsList;
 
         OnlyBandsSingerAdapter adapter = new OnlyBandsSingerAdapter(this, bandsSingers, ((SongsApplication) this.getApplication()));
         ListView listView = (ListView) findViewById(R.id.list);

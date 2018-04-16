@@ -17,11 +17,11 @@ import java.util.List;
  * Created by egi-megi on 11.04.18.
  */
 
-public class OnlyBandsSingerAdapter extends ArrayAdapter<String> {
+public class OnlyBandsSingerAdapter extends ArrayAdapter<Band> {
 
     SongsApplication application;
 
-    public OnlyBandsSingerAdapter(@NonNull Context context, @NonNull List<String> objects, SongsApplication application) {
+    public OnlyBandsSingerAdapter(@NonNull Context context, @NonNull List<Band> objects, SongsApplication application) {
         super(context, 0, objects);
         this.application = application;
 
@@ -35,14 +35,20 @@ public class OnlyBandsSingerAdapter extends ArrayAdapter<String> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.band_singer_item, parent, false);
         }
 
-        final String currentBand = getItem(position);
+        final Band currentBand = getItem(position);
 
 
         // Find the TextView in the song_on_list_itemist_item.xml layout with the ID version_number
         TextView bandSingerTextView = (TextView) listItemView.findViewById(R.id.band_singer_text_view);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        bandSingerTextView.setText(currentBand);
+        bandSingerTextView.setText(currentBand.getBandSinger());
+
+        // Find the ImageView in the list_item.xml layout with the ID version_number
+        ImageView bandSingerImageView = (ImageView) listItemView.findViewById(R.id.band_singer_image_view);
+        // Get the version number from the current AndroidFlavor object and
+        // set this text on the number TextView
+        bandSingerImageView.setImageResource(currentBand.getImageResourceId());
 
         return listItemView;
     }

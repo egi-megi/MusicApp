@@ -54,14 +54,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public String findSong(View view) {
+    public void findSong(View view) {
         EditText searchSongEditText = (EditText) findViewById(R.id.search);
         String titleOfSong = searchSongEditText.getText().toString();
-        if (titleOfSong.matches("(.*)+song.getTitle()")) {
-            Intent singleSongIntent = new Intent(MainActivity.this, SingleSongActivity.class);
-            startActivity(singleSongIntent);
+        for (Song s : ((SongsApplication) getApplication()).allSongs) {
+            if (s.getTitle().toLowerCase().matches(".*"+titleOfSong.toLowerCase()+".*")) {
+                Intent singleSongIntent = new Intent(MainActivity.this, SingleSongActivity.class);
+                singleSongIntent.putExtra("titleSingleSong", s.getTitle());
+                startActivity(singleSongIntent);
+                return;
+               // return titleOfSong;
+            }
         }
-        return titleOfSong;
     }
 
 }

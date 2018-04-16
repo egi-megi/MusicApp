@@ -12,7 +12,7 @@ import java.util.Collections;
 public class SongsApplication extends Application {
     ArrayList<Song> allSongs;
     ArrayList<Song> favSongs;
-    ArrayList<String> bandsList;
+    ArrayList<Band> bandsList;
 
     public SongsApplication() {
         this.allSongs = new ArrayList<>();
@@ -22,7 +22,7 @@ public class SongsApplication extends Application {
         Collections.sort(allSongs, new SongsTitleComparator());
         generateFavSongs();
         generateBandsList();
-        Collections.sort(bandsList);
+    //    Collections.sort(bandsList);
     }
 
     void insertSongs() {
@@ -57,10 +57,12 @@ public class SongsApplication extends Application {
     }
 
     private void generateBandsList() {
+        ArrayList<String> helpl=new ArrayList<>();
         for (int i = 0; i < allSongs.size(); i++) {
             Song song = allSongs.get(i);
-            if (!bandsList.contains(song.getBandSinger())) {
-                bandsList.add(song.getBandSinger());
+            if (!helpl.contains(song.getBandSinger())) {
+                helpl.add(song.getBandSinger());
+                bandsList.add(new Band(song.getBandSinger(), song.getImageResourceId()));
             }
         }
 
