@@ -21,7 +21,7 @@
             android:layout_height="@dimen/image_size_height"
             android:layout_weight="2.5"
             android:onClick="goToSingleSongActivity"
-            android:src="@drawable/piersi" />
+            android:src="@drawable/piersi_small" />
 
         <LinearLayout
             android:layout_width="0dp"

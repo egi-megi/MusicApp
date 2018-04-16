@@ -31,7 +31,7 @@ public class SongsApplication extends Application {
         allSongs.add(new Song("One Moment in Time", "Whitney Houston", R.drawable.whitney_houston_small));
         allSongs.add(new Song("I’m Every Woman", "Whitney Houston", R.drawable.whitney_houston_small));
         allSongs.add(new Song("I Will Always Love You", "Whitney Houston", R.drawable.whitney_houston_small));
-        allSongs.add(new Song("Hallelujah", "Rufus Wainwright", R.drawable.piersi_small));
+        allSongs.add(new Song("Hallelujah", "Rufus Wainwright", R.drawable.hallelujah_small));
         allSongs.add(new Song("Nie jestem sobą", "Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
         allSongs.add(new Song("Nowa gwiazda", "Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
         allSongs.add(new Song("Co ty tutaj robisz", "Elektryczne Gitary", R.drawable.elektryczne_gitary_small));
@@ -41,7 +41,7 @@ public class SongsApplication extends Application {
         allSongs.add(new Song("My Life Would Suck Without You", "Kelly Clarkson", R.drawable.clarkson_kelly_small));
         allSongs.add(new Song("Waka Waka (This Time for Africa)", "Shakira", R.drawable.shakira_small));
         allSongs.add(new Song("Radetzky March", "Strauss", R.drawable.strauss_small));
-        allSongs.add(new Song("Bałkanica", "Piersi ", R.drawable.piersi));
+        allSongs.add(new Song("Bałkanica", "Piersi ", R.drawable.piersi_small));
     }
 
     public void generateFavSongs() {
