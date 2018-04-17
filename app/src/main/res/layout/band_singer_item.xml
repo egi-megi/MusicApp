@@ -12,14 +12,14 @@
     <ImageView
         android:id="@+id/band_singer_image_view"
         android:layout_width="wrap_content"
-        android:layout_height="170dp"
+        android:layout_height="@dimen/image_size_height_for_band"
         android:src="@drawable/piersi_small"
         android:layout_marginBottom="@dimen/margines_between_lines"/>
 
     <!--Name of band/singer placed below of image-->
     <TextView
         android:id="@+id/band_singer_text_view"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/text_size_width_below_image"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/orangeText"

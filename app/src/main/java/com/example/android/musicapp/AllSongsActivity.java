@@ -34,7 +34,6 @@ public class AllSongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Set the content of the activity to use the songs_list.xml layout file
         setContentView(R.layout.songs_list);
 
         //Reference to ArrayList of Song named song  which is created in SongsApplication from list allSong

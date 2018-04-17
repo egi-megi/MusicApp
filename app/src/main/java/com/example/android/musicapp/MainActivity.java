@@ -34,22 +34,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }
-
-    // Make method for intent to FavoriteActivity
-    public void goToFavoriteActivity(View view) {
         // Find the View that shows the favorite category
         TextView favorite = (TextView) findViewById(R.id.favorite);
-        Intent favoriteIntent = new Intent(MainActivity.this, FavoriteActivity.class);
-        startActivity(favoriteIntent);
-    }
 
-    // Make method for intent to OnlyBandSingerActivity
-    public void goToBandSingerActivity(View view) {
+        // Make intent to FavoriteActivity using OnClickListener for favorite
+        favorite.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent favoriteIntent = new Intent(MainActivity.this, FavoriteActivity.class);
+                startActivity(favoriteIntent);
+            }
+            });
+
+
         // Find the View that shows the bandSinger category
         TextView bandSinger = (TextView) findViewById(R.id.music_bands_singers);
+
+        // Make intent to OnlyBandsSingerActivity using OnClickListener for bandSinger
+        bandSinger.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers View is clicked on.
+            @Override
+            public void onClick(View view) {
         Intent bandSingerIntent = new Intent(MainActivity.this, OnlyBandsSingerActivity.class);
         startActivity(bandSingerIntent);
+            }
+        });
     }
 
     // Make method for searching the song after title. It is not complete method
