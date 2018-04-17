@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:paddingBottom="@dimen/margines_bottom_single_song">
 
+    <!--Image for band-->
     <ImageView
         android:id="@+id/band_singer_image_view"
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!--Button for skipping previous song-->
         <Button
             android:id="@+id/skip_previous_button"
             android:layout_width="wrap_content"
@@ -31,6 +33,7 @@
             android:background="@color/background"
             android:drawableTop="@drawable/skip_previous_button" />
 
+        <!--CheckBox for check if song is playing or pausing-->
         <CheckBox
             android:id="@+id/strat_pausa_checkBox"
             android:layout_width="wrap_content"
@@ -38,6 +41,7 @@
             android:layout_marginRight="@dimen/margines_bottom_single_song"
             android:button="@drawable/start_pausa_checkbox" />
 
+        <!--Button for skipping next song-->
         <Button
             android:id="@+id/skip_next_button"
             android:layout_width="wrap_content"
@@ -46,6 +50,7 @@
             android:drawableTop="@drawable/skip_next_button" />
     </LinearLayout>
 
+    <!--Title of song-->
     <TextView
         android:id="@+id/title_text_view"
         android:layout_width="wrap_content"
@@ -59,6 +64,7 @@
         tools:text="title" />
 
 
+    <!--Name of band/singer-->
     <TextView
         android:id="@+id/band_singer_text_view"
         android:layout_width="wrap_content"

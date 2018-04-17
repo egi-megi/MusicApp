@@ -7,24 +7,26 @@ import java.io.Serializable;
  */
 
 public class Band implements Serializable {
-
+    // This is the class in which are placed variables and get methods
+    // for bands/singers and for images of these bands/singers
     private String mBandSinger;
     private int mImageResourceId;
 
     public Band(String bandSinger, int imageResourceId) {
         mBandSinger = bandSinger;
-        mImageResourceId=imageResourceId;
+        mImageResourceId = imageResourceId;
     }
 
 
     public String getBandSinger() {
-        return  mBandSinger;
-    };
+        return mBandSinger;
+    }
+
+    ;
 
     public int getImageResourceId() {
         return mImageResourceId;
     }
-
 
 
 }

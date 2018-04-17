@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/margines_between_songs"
-    android:paddingLeft="@dimen/margines_main">
+    android:paddingLeft="@dimen/margines_main"
+    android:paddingTop="@dimen/margines_between_songs">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:onClick="goToSingleSongActivity">
+        android:onClick="goToSingleSongActivity"
+        android:orientation="horizontal">
 
+        <!--Image for band/singer placed in the left from song's title-->
         <ImageView
             android:id="@+id/band_singer_image_view"
             android:layout_width="0dp"
             android:layout_height="@dimen/image_size_height"
+            android:layout_marginRight="@dimen/margines_main"
             android:layout_weight="2.5"
-            android:src="@drawable/piersi_small"
-            android:layout_marginRight="@dimen/margines_main"/>
+            android:src="@drawable/piersi_small" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="6"
-                android:id="@+id/title_text_view"
-                android:textColor="@color/orangeText"
-                android:textSize="@dimen/text_size_songs_title"
-                android:textStyle="bold"
-                tools:text="title" />
+        <!--Title of song-->
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textColor="@color/orangeText"
+            android:textSize="@dimen/text_size_songs_title"
+            android:textStyle="bold"
+            tools:text="title" />
 
-
+        <!--CheckBox for check if the song is favorite-->
         <CheckBox
             android:id="@+id/favorite_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/favorite_checkbox"/>
+            android:button="@drawable/favorite_checkbox" />
 
     </LinearLayout>
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="@dimen/thickness_lines"
-        android:background="@color/redLines" />
+        android:background="@color/redLines"
+        android:layout_marginTop="@dimen/margines_upon_line"
+        android:layout_marginBottom="@dimen/margines_below_line"/>
 
 
 </LinearLayout>

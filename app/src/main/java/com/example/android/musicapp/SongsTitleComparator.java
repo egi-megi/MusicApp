@@ -10,6 +10,7 @@ import java.util.Comparator;
 
 public class SongsTitleComparator implements Comparator<Song> {
     @Override
+    // Here is made the comparator for songs after titles of songs
     public int compare(Song o1, Song o2) {
         if (o1 != null && o2 != null) {
             if (o1.getTitle() != null && o2.getTitle() != null) {

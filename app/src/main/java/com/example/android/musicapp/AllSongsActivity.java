@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import javax.xml.transform.Source;
-
 /**
  * Created by egi-megi on 04.04.18.
  */
@@ -19,11 +17,12 @@ import javax.xml.transform.Source;
 public class AllSongsActivity extends AppCompatActivity {
 
     public void goToSingleSongActivity(View view) {
-        // Find the View that shows the bandSinger category
+        // Find the View that shows the title
         TextView textView =
                 view instanceof ImageView ? (TextView) ((View) view.getParent()).findViewById(R.id.title_text_view) :
                         (TextView) view.findViewById(R.id.title_text_view);
 
+        // Make intent to SingleSongActivity
         Intent titleIntent = new Intent(AllSongsActivity.this, SingleSongActivity.class);
         String songTitle = textView.getText().toString();
         titleIntent.putExtra("titleSingleSong", songTitle);
@@ -35,11 +34,14 @@ public class AllSongsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Set the content of the activity to use the songs_list.xml layout file
         setContentView(R.layout.songs_list);
 
+        //Reference to ArrayList of Song named song  which is created in SongsApplication from list allSong
+        // using AllSongsAdapter.
         ArrayList<Song> songs = ((SongsApplication) this.getApplication()).allSongs;
 
-        SongsAdapter adapter = new SongsAdapter(this, songs, ((SongsApplication) this.getApplication()));
+        AllSongsAdapter adapter = new AllSongsAdapter(this, songs, ((SongsApplication) this.getApplication()));
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
 

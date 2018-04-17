@@ -16,10 +16,10 @@ import java.util.ArrayList;
 public class OnlyBandsSingerActivity extends AppCompatActivity {
 
     public void goToBandActivity(View view) {
-        // Find the View that shows the bandSinger category
+        // Find the View that shows the band/singer name
         TextView textView = (TextView) view.findViewById(R.id.band_singer_text_view);
 
-
+        // Make intent to SongsInBandActivity
         Intent bandIntent = new Intent(OnlyBandsSingerActivity.this, SongsInBandActivity.class);
         String bandName = textView.getText().toString();
         bandIntent.putExtra("band", bandName);
@@ -29,8 +29,11 @@ public class OnlyBandsSingerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Set the content of the activity to use the songs_list.xml layout file
         setContentView(R.layout.songs_list);
 
+        //Reference to ArrayList of Band named bandsSingers which is created in SongsApplication from list bandsList
+        // using OnlyBandsSingerAdapter.
         ArrayList<Band> bandsSingers = ((SongsApplication) this.getApplication()).bandsList;
 
         OnlyBandsSingerAdapter adapter = new OnlyBandsSingerAdapter(this, bandsSingers, ((SongsApplication) this.getApplication()));

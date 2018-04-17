@@ -17,29 +17,29 @@ public class SingleSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_song_item);
         String titleSingleSong = getIntent().getStringExtra("titleSingleSong");
-
+        //Hide the ActionBar
         ActionBar actionBar = getSupportActionBar(); // or getActionBar();
         actionBar.hide(); // or even hide the actionbar
 
         Song song = ((SongsApplication) this.getApplication()).findSingleSong(titleSingleSong);
 
         if (song != null) {
-            // Find the TextView in the song_on_list_itemist_item.xml layout with the ID version_name
+            // Find the TextView in the single_song_item.xml layout with the ID version_name
             TextView titleTextView = (TextView) findViewById(R.id.title_text_view);
-            // Get the version name from the current AndroidFlavor object and
+            // Get the version name from the current Song object and
             // set this text on the name TextView
             titleTextView.setText(song.getTitle());
 
-            // Find the TextView in the song_on_list_itemist_item.xml layout with the ID version_number
+            // Find the TextView in the single_song_item.xml layout with the ID version_number
             TextView bandSingerTextView = (TextView) findViewById(R.id.band_singer_text_view);
-            // Get the version number from the current AndroidFlavor object and
+            // Get the version number from the current Song object and
             // set this text on the number TextView
             bandSingerTextView.setText(song.getBandSinger());
 
-            // Find the ImageView in the song_on_list_item.xmlitem.xml layout with the ID version_number
+            // Find the ImageView in the single_song_item.xml layout with the ID version_number
             ImageView bandSingerImageView = (ImageView) findViewById(R.id.band_singer_image_view);
             // Get the version number from the current AndroidFlavor object and
-            // set this text on the number TextView
+            // set this image on the number ImageView
             bandSingerImageView.setImageResource(song.getImageResourceId());
         }
 

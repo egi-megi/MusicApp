@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context="com.example.android.musicapp.MainActivity">
 
+    <!--Main image-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,6 +26,7 @@
         android:paddingRight="@dimen/margines_main"
         android:paddingTop="@dimen/margines_main">
 
+        <!--TextView for All Songs-->
         <TextView
             android:id="@+id/all_songs"
             android:layout_width="0dp"
@@ -47,6 +49,7 @@
             android:layout_marginLeft="@dimen/margines_between_lines"
             android:background="@color/redLines" />
 
+        <!--TextView for Favorite Songs-->
         <TextView
             android:id="@+id/favorite"
             android:layout_width="0dp"
@@ -120,6 +123,7 @@
         android:orientation="horizontal"
         android:paddingBottom="@dimen/margines_main">
 
+        <!--TextView for Music bands/Singers-->
         <TextView
             android:id="@+id/music_bands_singers"
             android:layout_width="0dp"
@@ -152,6 +156,7 @@
             android:orientation="horizontal"
             android:paddingBottom="@dimen/margines_main">
 
+            <!--EditText for searching songs after titles-->
             <EditText
                 android:id="@+id/search"
                 android:layout_width="wrap_content"
@@ -159,17 +164,19 @@
                 android:gravity="center_horizontal"
                 android:hint="@string/serach_song"
                 android:inputType="text"
+                android:textColor="@color/orangeText"
                 android:textColorHint="@color/orangeText"
                 android:textSize="@dimen/text_size_activities_title"
                 android:textStyle="italic"
-                android:textColor="@color/orangeText"/>
+                android:layout_marginLeft="@dimen/margines_main"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/background"
                 android:drawableTop="@drawable/ic_search_red_24dp"
-                android:onClick="findSong"/>
+                android:onClick="findSong"
+                android:layout_marginRight="@dimen/margines_main"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -8,8 +8,10 @@ import java.io.Serializable;
  * Created by egi-megi on 05.04.18.
  */
 
-public class Song implements Serializable{
+public class Song implements Serializable {
 
+    // This is the class in which are placed variables and get methods
+    // for titles and bands/singers of songs and for images of these bands/singers
     private String mTitle;
     private String mBandSinger;
     private int mImageResourceId;
@@ -18,16 +20,20 @@ public class Song implements Serializable{
     public Song(String title, String bandSinger, int imageResourceId) {
         mTitle = title;
         mBandSinger = bandSinger;
-        mImageResourceId=imageResourceId;
+        mImageResourceId = imageResourceId;
     }
 
     public String getTitle() {
         return mTitle;
-    };
+    }
+
+    ;
 
     public String getBandSinger() {
-        return  mBandSinger;
-    };
+        return mBandSinger;
+    }
+
+    ;
 
     public int getImageResourceId() {
         return mImageResourceId;
@@ -40,7 +46,6 @@ public class Song implements Serializable{
     public void setFavoriteSong(boolean favoriteSong) {
         this.favoriteSong = favoriteSong;
     }
-
 
 
 }

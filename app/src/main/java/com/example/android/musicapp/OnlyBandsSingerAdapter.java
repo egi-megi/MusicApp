@@ -38,16 +38,16 @@ public class OnlyBandsSingerAdapter extends ArrayAdapter<Band> {
         final Band currentBand = getItem(position);
 
 
-        // Find the TextView in the song_on_list_itemist_item.xml layout with the ID version_number
+        // Find the TextView in the band_singer_item.xml layout with the ID version_number
         TextView bandSingerTextView = (TextView) listItemView.findViewById(R.id.band_singer_text_view);
-        // Get the version number from the current AndroidFlavor object and
+        // Get the version number from the current Band object and
         // set this text on the number TextView
         bandSingerTextView.setText(currentBand.getBandSinger());
 
-        // Find the ImageView in the list_item.xml layout with the ID version_number
+        // Find the ImageView in the band_singer_item.xml layout with the ID version_number
         ImageView bandSingerImageView = (ImageView) listItemView.findViewById(R.id.band_singer_image_view);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
+        // Get the version number from the current Band object and
+        // set this image on the number TextView
         bandSingerImageView.setImageResource(currentBand.getImageResourceId());
 
         return listItemView;
