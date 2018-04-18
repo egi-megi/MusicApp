@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,17 +18,17 @@ import java.util.ArrayList;
 
 public class SongsInBandActivity extends AppCompatActivity {
 
-    public void goToSingleSongActivity(View view) {
-        // Find the View that shows the title
-        TextView textView =
-                view instanceof ImageView ? (TextView) ((View) view.getParent()).findViewById(R.id.title_text_view) :
-                        (TextView) view.findViewById(R.id.title_text_view);
-        // Make intent to SingleSongActivity
-        Intent titleIntent = new Intent(SongsInBandActivity.this, SingleSongActivity.class);
-        String songTitle = textView.getText().toString();
-        titleIntent.putExtra("titleSingleSong", songTitle);
-        startActivity(titleIntent);
-    }
+//    public void goToSingleSongActivity(View view) {
+//        // Find the View that shows the title
+//        TextView textView =
+//                view instanceof ImageView ? (TextView) ((View) view.getParent()).findViewById(R.id.title_text_view) :
+//                        (TextView) view.findViewById(R.id.title_text_view);
+//        // Make intent to SingleSongActivity
+//        Intent titleIntent = new Intent(SongsInBandActivity.this, SingleSongActivity.class);
+//        String songTitle = textView.getText().toString();
+//        titleIntent.putExtra("titleSingleSong", songTitle);
+//        startActivity(titleIntent);
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,46 @@ public class SongsInBandActivity extends AppCompatActivity {
         // Set in ActionBar like name of band or singer
         ActionBar actionBar = getSupportActionBar(); // or getActionBar();
         getSupportActionBar().setTitle(band); // set the top title
+
+
+        // Find the Button that shows the allSongs category
+        Button allSongsButton = (Button) findViewById(R.id.button_left);
+        allSongsButton.setText(R.string.all_songs);
+        // Make intent to AllSongsActivity using OnClickListener for bandSinger
+        allSongsButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent allSongsIntent = new Intent(SongsInBandActivity.this, AllSongsActivity.class);
+                startActivity(allSongsIntent);
+            }
+        });
+
+        // Find the Button that shows the favorite songs category
+        Button favoriteButton = (Button) findViewById(R.id.button_center);
+        favoriteButton.setText(R.string.favorite);
+        // Make intent to FavoriteActivity using OnClickListener for bandSinger
+        favoriteButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent bandSingerIntent = new Intent(SongsInBandActivity.this, FavoriteActivity.class);
+                startActivity(bandSingerIntent);
+            }
+        });
+
+        // Find the Button that shows the main category
+        Button mainActivityButton = (Button) findViewById(R.id.button_right);
+        mainActivityButton.setText(R.string.main_activity);
+        // Make intent to MainActivity using OnClickListener for bandSinger
+        mainActivityButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityIntent = new Intent(SongsInBandActivity.this, MainActivity.class);
+                startActivity(mainActivityIntent);
+            }
+        });
 
         //Reference to ArrayList of Song named songsInBand which is created in SongsApplication using
         // generateSongsInBand(band) method and using OnlyBandsSingerAdapter.

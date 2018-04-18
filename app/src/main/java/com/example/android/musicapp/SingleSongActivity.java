@@ -1,8 +1,11 @@
 package com.example.android.musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +23,59 @@ public class SingleSongActivity extends AppCompatActivity {
         //Hide the ActionBar
         ActionBar actionBar = getSupportActionBar(); // or getActionBar();
         actionBar.hide(); // or even hide the actionbar
+
+        // Find the Button that shows the allSongs category
+        Button allSongsButton = (Button) findViewById(R.id.button_left);
+        allSongsButton.setText(R.string.all_songs);
+        // Make intent to AllSongsActivity using OnClickListener for bandSinger
+        allSongsButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent allSongsIntent = new Intent(SingleSongActivity.this, AllSongsActivity.class);
+                startActivity(allSongsIntent);
+            }
+        });
+
+        // Find the Button that shows the favorite songs category
+        Button favoriteButton = (Button) findViewById(R.id.button_center_left);
+        favoriteButton.setText(R.string.favorite);
+        // Make intent to FavoriteActivity using OnClickListener for bandSinger
+        favoriteButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent favoriteIntent = new Intent(SingleSongActivity.this, FavoriteActivity.class);
+                startActivity(favoriteIntent);
+            }
+        });
+
+        // Find the Button that shows the bands category
+        Button bandsButton = (Button) findViewById(R.id.button_center_right);
+        bandsButton.setText(R.string.music_bands);
+        // Make intent to OnlyBandsSingerActivity using OnClickListener for bandSinger
+        bandsButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent bandSingerIntent = new Intent(SingleSongActivity.this, OnlyBandsSingerActivity.class);
+                startActivity(bandSingerIntent);
+            }
+        });
+
+
+        // Find the Button that shows the main category
+        Button mainActivityButton = (Button) findViewById(R.id.button_right);
+        mainActivityButton.setText(R.string.main_activity);
+        // Make intent to MainActivity using OnClickListener for bandSinger
+        mainActivityButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button is clicked on.
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityIntent = new Intent(SingleSongActivity.this, MainActivity.class);
+                startActivity(mainActivityIntent);
+            }
+        });
 
         Song song = ((SongsApplication) this.getApplication()).findSingleSong(titleSingleSong);
 

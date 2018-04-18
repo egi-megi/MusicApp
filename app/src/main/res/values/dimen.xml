@@ -13,10 +13,13 @@
     <dimen name="text_size_songs_band">14sp</dimen>
     <dimen name="text_size_single_songs_title">24sp</dimen>
     <dimen name="text_size_single_songs_band">20sp</dimen>
+    <dimen name="text_size_button_bottom">12sp</dimen>
 
     <dimen name="image_size_height">80dp</dimen>
     <dimen name="image_size_height_for_band">170dp</dimen>
     <dimen name="text_size_width_below_image">300dp</dimen>
+
+    <dimen name="button_height">34dp</dimen>
 
     <dimen name="thickness_lines">1dp</dimen>
 

@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/margines_bottom_single_song">
+    android:orientation="vertical">
 
     <!--Image for band-->
     <ImageView
@@ -55,9 +54,9 @@
         android:id="@+id/title_text_view"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_weight="2"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margines_main"
-        android:layout_weight="1"
         android:textColor="@color/orangeText"
         android:textSize="@dimen/text_size_single_songs_title"
         android:textStyle="bold"
@@ -69,12 +68,58 @@
         android:id="@+id/band_singer_text_view"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_weight="2"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margines_main"
-        android:layout_weight="1"
         android:textColor="@color/orangeText"
         android:textSize="@dimen/text_size_single_songs_band"
         tools:text="band/singer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/main_activity"
+            android:textSize="@dimen/text_size_button_bottom"
+            android:background="@color/orangeText" />
+
+        <Button
+            android:id="@+id/button_center_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/favorite"
+            android:textSize="@dimen/text_size_button_bottom"
+            android:background="@color/redLines" />
+
+        <Button
+            android:id="@+id/button_center_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/all_songs"
+            android:textSize="@dimen/text_size_button_bottom"
+            android:background="@color/orangeText" />
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/music_bands"
+            android:textSize="@dimen/text_size_button_bottom"
+            android:background="@color/redLines" />
+
+    </LinearLayout>
+
 
 
 </LinearLayout>

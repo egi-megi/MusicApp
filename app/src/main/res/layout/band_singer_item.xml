@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="goToBandActivity"
     android:orientation="vertical"
     android:paddingTop="@dimen/margines_between_songs"
     android:paddingBottom="@dimen/margines_bottom_single_song">
