@@ -27,8 +27,10 @@
         <Button
             android:id="@+id/skip_previous_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/button_play_pause_skip_height"
             android:layout_marginRight="@dimen/margines_bottom_single_song"
+            android:layout_marginTop="@dimen/margines_main"
+            android:layout_gravity="center_vertical"
             android:background="@color/background"
             android:drawableTop="@drawable/skip_previous_button" />
 
@@ -36,16 +38,19 @@
         <CheckBox
             android:id="@+id/strat_pausa_checkBox"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/button_play_pause_skip_height"
             android:layout_marginRight="@dimen/margines_bottom_single_song"
+            android:layout_gravity="center_vertical"
             android:button="@drawable/start_pausa_checkbox" />
 
         <!--Button for skipping next song-->
         <Button
             android:id="@+id/skip_next_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/button_play_pause_skip_height"
             android:background="@color/background"
+            android:layout_marginTop="@dimen/margines_main"
+            android:layout_gravity="center_vertical"
             android:drawableTop="@drawable/skip_next_button" />
     </LinearLayout>
 
@@ -82,6 +87,7 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom">
 
+        <!--Buttons for Activities-->
         <Button
             android:id="@+id/button_left"
             android:layout_width="0dp"
@@ -119,7 +125,6 @@
             android:background="@color/redLines" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

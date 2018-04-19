@@ -16,17 +16,6 @@ import java.util.ArrayList;
 
 public class OnlyBandsSingerActivity extends AppCompatActivity {
 
-//    public void goToBandActivity(View view) {
-//        // Find the View that shows the band/singer name
-//        TextView textView = (TextView) view.findViewById(R.id.band_singer_text_view);
-//
-//        // Make intent to SongsInBandActivity
-//        Intent bandIntent = new Intent(OnlyBandsSingerActivity.this, SongsInBandActivity.class);
-//        String bandName = textView.getText().toString();
-//        bandIntent.putExtra("band", bandName);
-//        startActivity(bandIntent);
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

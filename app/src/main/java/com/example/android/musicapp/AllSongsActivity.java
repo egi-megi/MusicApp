@@ -17,20 +17,6 @@ import java.util.ArrayList;
 
 public class AllSongsActivity extends AppCompatActivity {
 
-   /* public void goToSingleSongActivity(View view) {
-        // Find the View that shows the title
-        TextView textView =
-                view instanceof ImageView ? (TextView) ((View) view.getParent()).findViewById(R.id.title_text_view) :
-                        (TextView) view.findViewById(R.id.title_text_view);
-
-        // Make intent to SingleSongActivity
-        Intent titleIntent = new Intent(AllSongsActivity.this, SingleSongActivity.class);
-        String songTitle = textView.getText().toString();
-        titleIntent.putExtra("titleSingleSong", songTitle);
-        startActivity(titleIntent);
-
-    }*/
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +63,6 @@ public class AllSongsActivity extends AppCompatActivity {
         });
 
 
-
         //Reference to ArrayList of Song named song  which is created in SongsApplication from list allSong
         // using AllSongsAdapter.
         ArrayList<Song> songs = ((SongsApplication) this.getApplication()).allSongs;
@@ -87,7 +72,6 @@ public class AllSongsActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
     }
-
 
 
 }

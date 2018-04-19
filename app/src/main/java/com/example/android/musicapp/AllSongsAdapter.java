@@ -56,8 +56,8 @@ public class AllSongsAdapter extends ArrayAdapter<Song> {
         // set this image on the number ImageView
         bandSingerImageView.setImageResource(currentSong.getImageResourceId());
 
-
-        View.OnClickListener listener=new View.OnClickListener() {
+        // OnClickListener to intent to SingleSongActivity
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Make intent to SingleSongActivity
@@ -68,8 +68,8 @@ public class AllSongsAdapter extends ArrayAdapter<Song> {
             }
         };
 
-         titleTextView.setOnClickListener(listener);
-         bandSingerImageView.setOnClickListener(listener);
+        titleTextView.setOnClickListener(listener);
+        bandSingerImageView.setOnClickListener(listener);
 
         // Make functionality for CheckBox where user can set if the song is favorite and
         // if it is send to favorite songs

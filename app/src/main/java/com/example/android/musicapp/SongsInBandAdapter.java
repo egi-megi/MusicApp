@@ -50,7 +50,8 @@ public class SongsInBandAdapter extends ArrayAdapter<Song> {
         // set this image on the number ImageView
         bandSingerImageView.setImageResource(currentSong.getImageResourceId());
 
-        View.OnClickListener listener=new View.OnClickListener() {
+        // OnClickListener to intent to SingleSongActivity
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Make intent to SingleSongActivity
