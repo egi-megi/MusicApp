@@ -13,7 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/image_size_height_for_band"
         android:src="@drawable/piersi_small"
-        android:layout_marginBottom="@dimen/margines_between_lines"/>
+        android:layout_marginBottom="@dimen/margines_between_lines"
+        android:contentDescription="@string/music_bands_singers"/>
 
     <!--Name of band/singer placed below of image-->
     <TextView

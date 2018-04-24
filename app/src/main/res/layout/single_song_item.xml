@@ -14,7 +14,8 @@
         android:layout_height="0dp"
         android:layout_weight="10"
         android:scaleType="centerCrop"
-        android:src="@drawable/piersi_small" />
+        android:src="@drawable/piersi_small"
+        android:contentDescription="@string/music_bands_singers"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,9 +33,11 @@
             android:layout_marginTop="@dimen/margines_main"
             android:layout_gravity="center_vertical"
             android:background="@color/background"
-            android:drawableTop="@drawable/skip_previous_button" />
+            android:drawableTop="@drawable/skip_previous_button"
+            android:contentDescription="@string/skip_previous_button"/>
 
         <!--CheckBox for check if song is playing or pausing-->
+        <!--When CheckBox will be programming there should be set setContentDescription for "pause" and "play"-->
         <CheckBox
             android:id="@+id/strat_pausa_checkBox"
             android:layout_width="wrap_content"
@@ -51,7 +54,8 @@
             android:background="@color/background"
             android:layout_marginTop="@dimen/margines_main"
             android:layout_gravity="center_vertical"
-            android:drawableTop="@drawable/skip_next_button" />
+            android:drawableTop="@drawable/skip_next_button"
+            android:contentDescription="@string/skip_next_button"/>
     </LinearLayout>
 
     <!--Title of song-->

@@ -20,7 +20,8 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/image_size_height"
             android:layout_weight="2.5"
-            android:src="@drawable/piersi_small" />
+            android:src="@drawable/piersi_small"
+            android:contentDescription="@string/music_bands_singers"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -50,6 +51,7 @@
         </LinearLayout>
 
         <!--CheckBox for check if the song is favorite-->
+        <!--When CheckBox will be programming there should be set setContentDescription-->
         <CheckBox
             android:id="@+id/favorite_checkBox"
             android:layout_width="wrap_content"

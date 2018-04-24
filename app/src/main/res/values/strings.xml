@@ -3,8 +3,12 @@
 
     <string name="all_songs">All Songs</string>
     <string name="music_bands_singers">Music bands Singers</string>
+    <string name="music_bands_singers_manifest">Music Bands and Singers</string>
     <string name="music_bands">Music bands</string>
     <string name="favorite">Favorite</string>
     <string name="search_song">Search song</string>
     <string name="main_activity">Start page</string>
+
+    <string name="skip_previous_button">Skip previous song</string>
+    <string name="skip_next_button">Skip next song</string>
 </resources>

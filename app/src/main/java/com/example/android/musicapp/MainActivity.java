@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent favoriteIntent = new Intent(MainActivity.this, FavoriteActivity.class);
                 startActivity(favoriteIntent);
             }
-            });
+        });
 
 
         // Find the View that shows the bandSinger category
@@ -56,25 +56,33 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-        Intent bandSingerIntent = new Intent(MainActivity.this, OnlyBandsSingerActivity.class);
-        startActivity(bandSingerIntent);
+                Intent bandSingerIntent = new Intent(MainActivity.this, OnlyBandsSingerActivity.class);
+                startActivity(bandSingerIntent);
+            }
+        });
+
+
+        // Make method for searching the song after title. It is not complete method
+        // because it finds only first song for searching word
+        final EditText searchSongEditText = (EditText) findViewById(R.id.search_editText);
+        Button searchSongButton = (Button) findViewById(R.id.search_button);
+
+        searchSongButton.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the Button for searching is clicked on.
+            @Override
+            public void onClick(View view) {
+                String titleOfSong = searchSongEditText.getText().toString();
+                for (Song s : ((SongsApplication) getApplication()).allSongs) {
+                    if (s.getTitle().toLowerCase().matches(".*" + titleOfSong.toLowerCase() + ".*")) {
+                        Intent singleSongIntent = new Intent(MainActivity.this, SingleSongActivity.class);
+                        singleSongIntent.putExtra("titleSingleSong", s.getTitle());
+                        startActivity(singleSongIntent);
+                        return; // Here the method is breaking
+                    }
+                }
             }
         });
     }
 
-    // Make method for searching the song after title. It is not complete method
-    // because it finds only first song for searching word
-    public void findSong(View view) {
-        EditText searchSongEditText = (EditText) findViewById(R.id.search);
-        String titleOfSong = searchSongEditText.getText().toString();
-        for (Song s : ((SongsApplication) getApplication()).allSongs) {
-            if (s.getTitle().toLowerCase().matches(".*" + titleOfSong.toLowerCase() + ".*")) {
-                Intent singleSongIntent = new Intent(MainActivity.this, SingleSongActivity.class);
-                singleSongIntent.putExtra("titleSingleSong", s.getTitle());
-                startActivity(singleSongIntent);
-                return; // Here the method is breaking
-            }
-        }
-    }
 
 }

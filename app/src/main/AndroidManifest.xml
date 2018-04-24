@@ -19,15 +19,15 @@
         </activity>
         <activity
             android:name=".AllSongsActivity"
-            android:label="All Songs">
+            android:label="@string/all_songs">
         </activity>
         <activity
             android:name=".FavoriteActivity"
-            android:label="Favorite">
+            android:label="@string/favorite">
         </activity>
         <activity
             android:name=".OnlyBandsSingerActivity"
-            android:label="Music Bands and Singers">
+            android:label="@string/music_bands_singers_manifest">
         </activity>
         <activity
             android:name=".SongsInBandActivity">

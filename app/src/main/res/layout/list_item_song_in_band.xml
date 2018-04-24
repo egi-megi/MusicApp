@@ -20,7 +20,8 @@
             android:layout_height="@dimen/image_size_height"
             android:layout_marginRight="@dimen/margines_main"
             android:layout_weight="2.5"
-            android:src="@drawable/piersi_small" />
+            android:src="@drawable/piersi_small"
+            android:contentDescription="@string/music_bands_singers"/>
 
         <!--Title of song-->
         <TextView
