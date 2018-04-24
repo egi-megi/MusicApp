@@ -27,13 +27,11 @@ public class Song implements Serializable {
         return mTitle;
     }
 
-    ;
 
     public String getBandSinger() {
         return mBandSinger;
     }
 
-    ;
 
     public int getImageResourceId() {
         return mImageResourceId;
